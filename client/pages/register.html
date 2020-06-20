@@ -15,66 +15,88 @@
 </head>
 
 <body>
-
+    <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://vectorified.com/images/dog-face-icon-13.png" width="44" height="40"
+                class="d-inline-block align-top" alt="" loading="lazy">
+        </a>
+        <span class="navbar-brand mb-0 h1">Dog sight </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log in </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+        <!-- nav-bar  + -->
+    </nav>
     <div class="container" id="my_container">
         <!-- header "box" -->
-        <div id="top_title" class="row shadow-sm p-1">
-            <div class="col-3">
-                <!--left side-icon mobile  -->
-                <img src="https://vectorified.com/images/dog-face-icon-13.png" width="50" height="50"
-                    class="align-top d-md-none mt-2" alt="">
-                <!--left side-icon web -->
-                <img src="https://vectorified.com/images/dog-face-icon-13.png" width="100" height="100"
-                    class="align-top d-none d-md-block mt-2" alt="">
-                <p class="h2 d-none d-md-block">Dog sight (Web) </p>
+        <div div id="top_title" class="row shadow-sm p-1">
+            <!-- "welcome home" photo for web -->
+            <div class="m-auto" id="top_photo">
+                <img src="https://x4qwxtnf8s-flywheel.netdna-ssl.com/wp-content/uploads/2019/09/1440x550_WelcomeHome_SeriesArt.png"
+                    class="rounded-pill d-none d-md-block my-2 img-fluid" alt="Responsive image">
+                <p class="h3 d-none d-md-block">Dog sight (Web) </p>
             </div>
-            <div class="col-9">
-                <!-- "welcome home" photo for web -->
-                <div class="m-auto" id="top_photo">
+            <!-- for mobile -->
+            <div class="row d-md-none px-2">
+                <!-- "welcome home" photo for mobile -->
+                <div class="m-auto" style="width: 55%;">
                     <img src="https://x4qwxtnf8s-flywheel.netdna-ssl.com/wp-content/uploads/2019/09/1440x550_WelcomeHome_SeriesArt.png"
-                        class="rounded-pill d-none d-md-block my-2 img-fluid" alt="Responsive image">
+                        class="rounded-pill d-md-nome my-2 mx-auto img-fluid" alt="Responsive image">
                 </div>
-                <!--header box for mobile -->
+            </div>
+            <div class="m-auto d-md-none">
                 <p class="h4 d-md-none mt-1">Dog sight (mobile) </p>
             </div>
         </div>
-        <!-- for mobile -->
-        <div class="row d-md-none px-2">
-            <!-- "welcome home" photo for mobile -->
-            <div class="m-auto" style="
-             width: 78%;">
-                <img src="https://x4qwxtnf8s-flywheel.netdna-ssl.com/wp-content/uploads/2019/09/1440x550_WelcomeHome_SeriesArt.png"
-                    class="rounded-pill d-md-nome my-2 mx-auto img-fluid" alt="Responsive image">
-            </div>
-        </div>
         <!-- third box / middle box  -->
-        <div class="row mx-auto" id="third_box">
-            <form class="needs-validation mx-md-auto w-75" method="post" action="/register" novalidate>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="inputEmail4">E-mail</label>
-                        <input name="email" type="email" class="form-control" id="inputEmail4"
-                            placeholder="name@example.com" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a valid email address
-                        </div>
+        <div class="row" id="third_box">
+            <form class="needs-validation mx-auto " method="post" action="/register" novalidate>
+                <div class="mb-3">
+                    <label for="inputEmail4">E-mail</label>
+                    <input name="email" type="email" class="form-control" id="inputEmail4"
+                        placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="inputPassword6">Password</label>
-                        <input name="password" type="password" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Must be 8-20 characters long.
-                        </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid email address
                     </div>
                 </div>
-
+                <div class=" mb-3">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" id="password" class="form-control"
+                        aria-describedby="passwordHelpInline" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Must be 8-20 characters long.
+                    </div>
+                </div>
+                <div class=" mb-3">
+                    <label for="confirm_password"> Confirm password</label>
+                    <input name="password" type="password" id="confirm_password" class="form-control"
+                        aria-describedby="passwordHelpInline" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Password don't match .
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="form-check">
                         <input name="acceptTerms" class="form-check-input" type="checkbox" id="invalidCheck" required>
@@ -86,9 +108,13 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <div>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <button class="btn btn-primary" type="reset">Reset form</button>
+                </div>
             </form>
         </div>
+        <!-- container -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
