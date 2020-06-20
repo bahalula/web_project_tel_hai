@@ -1,26 +1,20 @@
 
-#title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-   
-}
-
 #top_title {
     font-family: 'Dancing Script', cursive;
     background-color: rgb(253, 229, 229);
-   
+    text-align: center; 
 }
 
 #third_box {
     background-color:rgb(176, 250, 228);
+    padding-top: 4px;
 }
 
 
 #top_photo {
 /* for  web display */
-    width: 70%;
+    width: 30%;
 }
-
 
 #my_container{
     background-color: crimson;  
