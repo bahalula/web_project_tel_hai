@@ -1,0 +1,10 @@
+#text_card{
+    text-align: center;
+}
+
+#center_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
