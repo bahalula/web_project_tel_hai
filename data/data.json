@@ -1,0 +1,308 @@
+{
+    "users": [
+        {
+            "email": "ronald@pornhub.com",
+            "password": "12345"
+        },
+        {
+            "email": "mira_hershkovitz@gmail.com",
+            "password": "07964530hlfp4343"
+        },
+        {
+            "email": "neo.lavi@gmail.com",
+            "password": "neo892039"
+        },
+        {
+            "email": "maor.ahroni@gmail.com",
+            "password": "nd8lfv92039"
+        },
+        {
+            "email": "nachman_meoman@walla.com",
+            "password": "pliezo450"
+        },
+        {
+            "email": "abzizi@walla.com",
+            "password": "pipilolo75"
+        },
+        {
+            "email": "yaniv_zcaffe@hotmail.com",
+            "password": "cogoE4e3"
+        },
+        {
+            "email": "moshe_bativah@gmil.com",
+            "password": "grgkl335rfg"
+        },
+        {
+            "email": "donald_tramp@porhub.com",
+            "password": "makeamerikagreatagain"
+        },
+        {
+            "email": "benjamin_n@porhub.com",
+            "password": "sararuletheworld"
+        }
+    ],
+    "business": [
+        {
+            "id": 21,
+            "name:": "Pasta Basta",
+            "type": "restaurant",
+            "vegan": true,
+            "area": "Kiryat Shemona",
+            "longitude": 33.235229,
+            "latitude": 35.589943
+        },
+        {
+            "id": 22,
+            "name:": "Pasta Basta",
+            "type": "restaurant",
+            "vegan": true,
+            "area": "Haifa",
+            "longitude": 32.802461,
+            "latitude": 34.983378
+        },
+        {
+            "id": 23,
+            "name:": "Caffe Hamidrechov",
+            "type": "coffee shope",
+            "vegan": false,
+            "area": "Kfar Sabba",
+            "longitude": 32.183330,
+            "latitude": 34.905338
+        },
+        {
+            "id": 24,
+            "name:": "Golan Brewery",
+            "type": "restaurant",
+            "vegan": false,
+            "area": "Katzrin",
+            "longitude": 32.987353,
+            "latitude": 35.707096
+        },
+        {
+            "id": 25,
+            "name:": "Hachakura",
+            "type": "pub",
+            "vegan": false,
+            "area": "Katzrin",
+            "longitude": 33.281074,
+            "latitude": 35.580845
+        },
+        {
+            "id": 26,
+            "name:": "The witch and the milkman",
+            "type": "restaurant",
+            "vegan": false,
+            "area": "Gan Hatzafon",
+            "longitude": 33.223619,
+            "latitude": 35.614964
+        },
+        {
+            "id": 27,
+            "name:": "Tails",
+            "type": "coffee shope",
+            "vegan": false,
+            "area": "Haifa",
+            "longitude": 32.811374,
+            "latitude": 34.997877
+        },
+        {
+            "id": 28,
+            "name:": "Anita's ice cream",
+            "type": "ice cream parlor",
+            "vegan": true,
+            "area": "Tel Aviv",
+            "longitude": 32.062412,
+            "latitude": 34.764861
+        },
+        {
+            "id": 29,
+            "name:": "Landver",
+            "type": "coffee shope",
+            "vegan": true,
+            "area": "Tel Aviv",
+            "longitude": 32.067666,
+            "latitude": 34.775979
+        },
+        {
+            "id": 230,
+            "name:": "Bahal Habaiet",
+            "type": "restaurant",
+            "vegan": false,
+            "area": "Rechovot",
+            "longitude": 31.901918,
+            "latitude": 34.808682
+        }
+    ],
+    "vacation": [
+        {
+            "id": 31,
+            "name": "Neve Ayala - luxury suites",
+            "type": "guest room",
+            "area": "Hatzor",
+            "longitude": 32.987505,
+            "latitude": 35.542255
+        },
+        {
+            "id": 32,
+            "name": "Hvaya Banofh",
+            "type": "guest room",
+            "area": "Rosh Pina",
+            "longitude": 32.995879,
+            "latitude": 35.529706
+        },
+        {
+            "id": 33,
+            "name": "Adi hotel",
+            "type": "hotel",
+            "area": "Eilat",
+            "longitude": 29.551383,
+            "latitude": 34.950469
+        },
+        {
+            "id": 34,
+            "name": "Haava Bikta shell phaam",
+            "type": "resort",
+            "area": "Amirim",
+            "longitude": 32.937932,
+            "latitude": 35.454242
+        },
+        {
+            "id": 35,
+            "name": "Four Seasons Galilee",
+            "type": "guest room",
+            "area": "Ilaniya",
+            "longitude": 32.751392,
+            "latitude": 35.407840
+        },
+        {
+            "id": 36,
+            "name": "zimmer Elrome",
+            "type": "guest room",
+            "area": "El rome",
+            "longitude": 33.183069,
+            "latitude": 35.772769
+        },
+        {
+            "id": 37,
+            "name": "Elipaz ",
+            "type": "guest room",
+            "area": "Elipaz",
+            "longitude": 29.796360,
+            "latitude": 35.011493
+        },
+        {
+            "id": 38,
+            "name": "Red white ",
+            "type": "guest room",
+            "area": "Amirim",
+            "longitude": 32.935672,
+            "latitude": 35.448069
+        },
+        {
+            "id": 39,
+            "name": "Le Marin",
+            "type": "guest room",
+            "area": "Ashkelon",
+            "longitude": 32.891542,
+            "latitude": 35.508307
+        },
+        {
+            "id": 40,
+            "name": "Romance Bamarom",
+            "type": "guest room",
+            "area": "Kahal",
+            "longitude": 31.680342,
+            "latitude": 34.556754
+        }
+    ],
+    "activities": [
+        {
+            "id": 41,
+            "name": "Lev Hamidbar",
+            "type": "q",
+            "area": "Tzokim"
+            "longitude": 30.483259,
+            "latitude": 35.163427
+        },
+        {
+            "id": 42,
+            "name": "Habonim Beach",
+            "type": "camping",
+            "area": "Atlit",
+            "longitude": 32.651558,
+            "latitude": 34.925154
+        },
+        {
+            "id": 43,
+            "name": "Nacahl Hashofet",
+            "type": "trek",
+            "area": "Megido",
+            "longitude": 32.629456,
+            "latitude": 35.106495
+        },
+        {
+            "id": 44,
+            "name": "Shveitsarya ha-Ktana",
+            "type": "trek",
+            "area": "Hacarmel",
+            "longitude": 32.747264,
+            "latitude": 35.026468
+        },
+        {
+            "id": 44,
+            "name": "Negev Camel Ranch",
+            "type": "camping",
+            "area": "negev",
+            "longitude": 31.029870,
+            "latitude": 35.076652
+        },
+        {
+            "id": 45,
+            "name": "Forest Fairy",
+            "type": "camping",
+            "area": "Beit Oren",
+            "longitude": 32.732278,
+            "latitude": 35.000948
+        },
+        {
+            "id": 46,
+            "name": "yogifordogi",
+            "type": "yoga studio",
+            "area": "Tel Aviv",
+            "longitude": 32.089025,
+            "latitude": 34.779887
+        },
+        {
+            "id": 47,
+            "name": "dog park",
+            "type": "dog park",
+            "area": "Kiryat Shemona",
+            "longitude": 33.238310,
+            "latitude": 35.579500
+        },
+        {
+            "id": 48,
+            "name": "dog park",
+            "type": "dog park",
+            "area": "Nahariya",
+            "longitude": 32.989025,
+            "latitude": 35.083041
+        },
+        {
+            "id": 49,
+            "name": "dog park",
+            "type": "dog park",
+            "area": "Tel Aviv",
+            "longitude": 32.129757,
+            "latitude": 34.792234
+        },
+        {
+            "id": 450,
+            "name": "Park Nesher",
+            "type": "dog park",
+            "area": "Nesher",
+            "longitude": 33.773243,
+            "latitude": 35.031116
+        }
+    ]
+}
