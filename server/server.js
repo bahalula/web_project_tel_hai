@@ -36,7 +36,9 @@ app.post('/register', (req, res) => {
 app.get('/profile', (req, res) => {
     res.sendFile(path.join(pages_dir, 'profile.html'))
 })
-
+app.get('/edit', (req, res) => {
+    res.sendFile(path.join(pages_dir, 'edit.html'))
+})
 app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
 
 // TODO: add page was not found.

@@ -1,30 +1,23 @@
 
-$(function () {
-    // validation for password
-    var password = document.getElementById("password")
-    var confirm_password = document.getElementById("confirm_password");
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    password.addEventListener("input", (event) => {
-        confirm_password.pattern = password.value;
-    })
-    var validation = Array.prototype.filter.call(forms, function (form) {
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-    //  need to be in server side or client? 
-    function validatePassword() {
-        if (password.value != confirm_password.value) {
-            console.log("Passwords Don't Match");
-        }
-    }
-
+// validation for password
+var password = document.getElementById("password")
+var confirm_password = document.getElementById("confirm_password");
+password.addEventListener("input", (event) => {
+    confirm_password.pattern = password.value;
 })
+
+var forms = document.getElementsByClassName('needs-validation');
+Array.prototype.filter.call(forms, function (form) {
+    // loop over elements and prevent submission 
+    form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    }, false);
+});
+
 
 
 
