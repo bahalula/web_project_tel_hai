@@ -1,14 +1,14 @@
 
 #top_title {
     font-family: 'Dancing Script', cursive;
-   
+   color:  rgb(227, 238, 227);
     text-align: center; 
 }
 
 #third_box {
-  
+    color:  rgb(227, 238, 227);
     padding-top: 4px;
-
+    font-family: 'Dancing Script', cursive;
 }
 
 
@@ -24,3 +24,24 @@
     padding: 10px;
     margin: auto;
 }
+
+.bg-image {
+    /* The image used */
+    background-image: url("/image/register.jpg");
+    
+    background-color: rgba(18, 80, 92, 0.253);
+    /* Add the blur effect */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    box-shadow: inset 0 0 0 1000px rgba(6, 25, 26, 0.2);
+
+  }

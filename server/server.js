@@ -39,6 +39,8 @@ app.get('/profile', (req, res) => {
 app.get('/edit', (req, res) => {
     res.sendFile(path.join(pages_dir, 'edit.html'))
 })
-app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
+// app.post('/edit', (req, res) => {
+//     console.log(req.body);
+//     res.sendFile(path.join(pages_dir, 'edit.html'))
 
-// TODO: add page was not found.
+app.listen(port, () => console.log(`app listening at http://localhost:${port}`))

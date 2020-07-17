@@ -1,20 +1,33 @@
 #card_style{
     box-shadow: 0 4px 5px 0  rgba(73, 69, 69, 0.5);
-    background-image: url("/image/background.jpg");
+    background-image: url("/image/girl.jpg");
+    background-color: rgba(18, 80, 92, 0.253);
+    /* Add the blur effect */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
 .info{
-    color: rgba(74, 12, 85, 0.5);
+    color: rgba(38, 14, 42, 0.657);
 }
 
 h5{
     font-family: 'Merienda One', cursive;
     font-size: 30px;
+    color: rgba(241, 230, 236, 0.74);
 }
 
 P{
-
+    font-family: 'Merienda One', cursive;
     font-size: 20px;
-    
+    color: rgba(70, 5, 41, 0.801)
 }
