@@ -1,33 +1,31 @@
-#text_style
-{ 
-font-family: 'Montserrat',
- sans-serif;
- color: rgb(27, 19, 18);
+.rest-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(27, 19, 18);
 }
-
-
 
 body {
-    background: #222225;
-    
+	background: #222225;
 }
 
-#title_style
-{
-    text-align: center;
-    color: rgb(56, 23, 0);
-    font-family: 'Rowdies', cursive;
+.rest-title {
+	text-align: center;
+	color: rgb(56, 23, 0);
+	font-family: 'Rowdies', cursive;
 }
 
-#card_style{
+.rest-banner {}
+
+.rest-body {}
+
+.rest-info {}
+
+/* #card_style{
     width: 18rem;
     box-shadow: 4px 0px 4px 0 rgba(246, 246, 246, 0.637);
-}
+} */
 
 .rating {
-    font-size: 28px;
-    color: rgb(240, 236, 28);
-    cursor: pointer;
-
-     }
-
+	font-size: 28px;
+	color: rgb(240, 236, 28);
+	cursor: pointer;
+}
