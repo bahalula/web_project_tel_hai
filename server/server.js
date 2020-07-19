@@ -43,4 +43,8 @@ app.get('/edit', (req, res) => {
 //     console.log(req.body);
 //     res.sendFile(path.join(pages_dir, 'edit.html'))
 
+app.get('/businessCard', (req, res) => {
+    res.sendFile(path.join(pages_dir, 'businessCard.html'))
+})
+
 app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
