@@ -16,35 +16,35 @@ app.use(express.static(public_dir))
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(pages_dir, 'home.html'))
+	res.sendFile(path.join(pages_dir, 'home.html'))
 })
 app.get('/login', (req, res) => {
-    /* todo */
-    res.sendFile(path.join(pages_dir, 'login.html'))
+	/* todo */
+	res.sendFile(path.join(pages_dir, 'login.html'))
 })
 app.post('/login', (req, res) => {
-    console.log(req.body);
-    res.redirect('/profile')
+	console.log(req.body);
+	res.redirect('/profile')
 })
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(pages_dir, 'register.html'))
+	res.sendFile(path.join(pages_dir, 'register.html'))
 })
 app.post('/register', (req, res) => {
-    console.log(req.body);
-    res.sendFile(path.join(pages_dir, 'register.html'))
+	console.log(req.body);
+	res.sendFile(path.join(pages_dir, 'register.html'))
 })
 app.get('/profile', (req, res) => {
-    res.sendFile(path.join(pages_dir, 'profile.html'))
+	res.sendFile(path.join(pages_dir, 'profile.html'))
 })
 app.get('/edit', (req, res) => {
-    res.sendFile(path.join(pages_dir, 'edit.html'))
+	res.sendFile(path.join(pages_dir, 'edit.html'))
 })
 // app.post('/edit', (req, res) => {
 //     console.log(req.body);
 //     res.sendFile(path.join(pages_dir, 'edit.html'))
 
-app.get('/businessCard', (req, res) => {
-    res.sendFile(path.join(pages_dir, 'businessCard.html'))
+app.get('/restaurants', (req, res) => {
+	res.sendFile(path.join(pages_dir, 'restaurants.html'))
 })
 
 app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
