@@ -8,7 +8,7 @@
 	<link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/restaurants.css" media="screen" />
+	<link rel="stylesheet" href="/css/vacation.css" media="screen" />
 	<title>Business Card</title>
 </head>
 
@@ -39,55 +39,53 @@
 		</div>
 		<!-- nav-bar  + -->
 	</nav>
-	<div class="container py-3" id="rest-list">
+	<div class="container py-3" id="vac-list">
 
 	</div>
 
-	<template id="rest-template">
+	<template id="vac-template">
 
 		<div class="card mt-3 mx-auto p-3">
 			<!-- image and icon -->
 			<div class="row">
-				<div class="col-12 col-md-3 rest-banner">
+				<div class="col-12 col-md-3 vac-banner">
 					<div class="col-6 mx-auto">
-						<img src="" class="card-img-top rounded-circle  rest-img" alt="...">
+						<img src="" class="card-img-top rounded-circle  vac-img" alt="...">
 					</div>
 
 				</div>
 				<!-- content -->
-				<div class="card-body rest-body col-12 col-md-5">
+				<div class="card-body vac-body col-12 col-md-5">
 					<div class="text-center ">
-						<i class="fa fa-cutlery" aria-hidden="true"></i>
+						<i class="fa fa-umbrella" aria-hidden="true"></i>
 					</div>
 					<!-- title -->
-					<h5 class="card-title rest-title"></h5>
+					<h5 class="card-title vac-title"></h5>
 					<!-- description  -->
-					<p class="card-text rest-desc"></p>
+					<p class="card-text vac-desc"></p>
 				</div>
-				<ul class="list-group list-group-flush rest-info col-12 col-md-4">
+				<ul class="list-group list-group-flush vac-info col-12 col-md-4">
 					<!--  location -->
 					<li class="list-group-item">
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						<span class="rest-location"></span>
+						<span class="vac-location"></span>
 					</li>
 					<!-- website -->
 					<li class="list-group-item"><i class="fa fa-globe" aria-hidden="true"></i>
-						<a href="#" class="stretched-link rest-website">Visit Web</a>
+						<a href="#" class="stretched-link vac-website">Visit Web</a>
 					</li>
 
 					<li class=" list-group-item">
 						<i class="fa fa-phone" aria-hidden="true"></i>
-						<a href="tel:#" class="rest-phone"></a>
+						<a href="tel:#" class="vac-phone"></a>
 					</li>
-					<li class=" list-group-item">
-						<div class="rating">
-							<span class="fa fa-star-o"> </span>
-							<span class="fa fa-star-o"> </span>
-							<span class="fa fa-star-o"> </span>
-							<span class="fa fa-star-o"> </span>
-							<span class="fa fa-star-o"> </span>
-						</div>
-					</li>
+					<div class="rating">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"> </i>
+						<i class="fa fa-star"> </i>
+						<i class="fa fa-star"> </i>
+					</div>
 				</ul>
 			</div>
 		</div>
@@ -104,7 +102,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
-	<script src="/js/restaurants.js"></script>
+	<script src="/js/vacation.js"></script>
 </body>
 
 </html>

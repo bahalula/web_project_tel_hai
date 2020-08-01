@@ -1,0 +1,33 @@
+.act-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(27, 19, 18);
+}
+
+body {
+	background: #222225;
+}
+
+.act-title {
+	text-align: center;
+	color: rgb(56, 23, 0);
+	font-family: 'Rowdies', cursive;
+}
+
+.act-type{
+	text-align: center;
+	color: rgb(10, 4, 0);
+	font-family: 'Rowdies', cursive;
+
+}
+
+.act-banner {}
+
+.act-body {}
+
+.act-info {}
+
+.rating {
+	font-size: 28px;
+	color: rgb(240, 236, 28);
+	cursor: pointer;
+}

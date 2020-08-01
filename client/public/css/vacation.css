@@ -1,0 +1,31 @@
+.vac-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(27, 19, 18);
+}
+
+body {
+	background: #222225;
+}
+
+.vac-title {
+	text-align: center;
+	color: rgb(56, 23, 0);
+	font-family: 'Rowdies', cursive;
+}
+
+.vac-banner {}
+
+.vac-body {}
+
+.vac-info {}
+
+
+
+.rating {
+	font-size: 28px;
+	color: rgb(17, 17, 17);
+	cursor: pointer;
+}
+.rating .fill {
+	color:yellow;
+}

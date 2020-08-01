@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="/">
             <img src="https://vectorified.com/images/dog-face-icon-13.png" width="44" height="40"
                 class="d-inline-block align-top" alt="" loading="lazy">
         </a>
-        <span class="navbar-brand mb-0 h1">Dog sight </span>
+        <span class="navbar-brand mb-0 h1">Dog Sight </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,24 +43,29 @@
         </div>
         <!-- nav-bar  + -->
     </nav>
-    <div class="text-center bg-image">
-        <form id="form_signIn" method="post" action="/login">
-            <img class="mb-4 img-fluid" alt="Responsive image"
-                src="https://image.flaticon.com/icons/png/512/53/53086.png" height="150" width="150">
-            <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required
-                autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password"
-                required>
-            <div class="checkbox my-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
+
+
+    <div class="container-fluid text-style bg-image" style="flex: 1;">
+        <div class="row align-items-center h-100">
+            <div class="col-sm-4 col-md-3 mx-auto">
+                <form>
+                    <h1 class="text-center"> Log In</h1>
+                    <div class="form-group" method="post" action="/login">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text">We'll never share your email with
+                            anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark">Log in</button>
+                    </div>
+                </form>
             </div>
-            <button class="btn btn-lg btn-dark btn-block" type="submit">Sign in</button>
-        </form>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

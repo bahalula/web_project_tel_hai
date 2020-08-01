@@ -47,4 +47,12 @@ app.get('/restaurants', (req, res) => {
 	res.sendFile(path.join(pages_dir, 'restaurants.html'))
 })
 
+app.get('/vacation', (req, res) => {
+	res.sendFile(path.join(pages_dir, 'vacation.html'))
+})
+
+app.get('/activities', (req, res) => {
+	res.sendFile(path.join(pages_dir, 'activities.html'))
+})
+
 app.listen(port, () => console.log(`app listening at http://localhost:${port}`))

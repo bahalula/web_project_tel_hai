@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="/">
             <img src="https://vectorified.com/images/dog-face-icon-13.png" width="44" height="40"
                 class="d-inline-block align-top" alt="" loading="lazy">
         </a>
-        <span class="navbar-brand mb-0 h1">Dog sight </span>
+        <span class="navbar-brand mb-0 h1">Dog Sight </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,40 +39,35 @@
         </div>
         <!-- nav-bar  + -->
     </nav>
-    <div class="container ">
-        <div class="card mt-3" id="card_style">
-            <div class="col-4 pt-3 mx-auto d-md-block d-none">
-                <img src="/image/profile_image.jpg" class="shadow-lg 
-                rounded-circle img-fluid" alt="Responsive image">
-            </div>
-            <div class="d-md-none col-8 mx-auto pt-3">
-                <img src="/image/profile_image.jpg" class="shadow-lg rounded-circle img-fluid" alt="Responsive image">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"> Welcome Back, Eden Bahalul</h5>
-                <div class="card-text">
-                    <p> <i class="fa fa-facebook-official info"> </i> Facebook</p>
-                    <p> <i class="fa fa-instagram info"></i>
-                        Instagram</p>
-                    <p> <i class="fa fa-home info"></i>
-                        Location: Haifa</p>
-                    <p> <i class="fa fa-venus-mars info"></i>
-                        Dog gender: female</p>
-                    <p><i class="fa fa-anchor" aria-hidden="true"></i>
-                        Dog name: Maiple </p>
-                    <p> <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                        Dog age: 2 years </p>
+    <div class="container-fluid" style="flex: 1;">
+        <div class=" row align-items-center h-100">
+            <div class="col-md-6 mx-auto text-center py-3">
+                <div class="card shadow-sm">
+                    <img src="/image/profile_image.jpg" class=" mt-2 shadow-lg rounded-circle profile-img card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title">Eden Bahalul</h2>
+                        <p class="card-text"> <i class="fa fa-home info"></i>
+                            Location: Haifa</p>
+                        <p class="card-text"> <i class="fa fa-venus-mars info"></i>
+                            Dog gender: female</p>
+                        <p class="card-text"><i class="fa fa-anchor" aria-hidden="true"></i>
+                            Dog name: Maiple </p>
+                        <p class="card-text"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            Dog age: 2 years </p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-dark"> <i class="fa fa-facebook-official info">
+                                </i> Facebook</button>
+                            <button type="button" class="btn btn-outline-dark"> <i class="fa fa-instagram info"></i>
+                                Instagram</button>
+                            <button type="button" class="btn btn-outline-dark"> <i class="fa fa-twitter info"></i>
+                                Twitter</button>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <a href="/edit" class="btn btn-dark">Edit profile</a>
-                <a href="#" class="btn btn-dark">My rates</a>
             </div>
         </div>
     </div>
-
-
-
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
