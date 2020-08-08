@@ -1,5 +1,51 @@
 $(function () {
-	// TODO user stars rate
+
+	let ratingsMap;
+	try {
+		ratingsMap = JSON.parse(localStorage.getItem("rating"));
+	} catch (err) {
+		ratingsMap = {};
+	}
+
+	function setStars(elem) {
+		// for knowing which card the event (click) came from. 
+		const id = $(elem).closest(".entry").data("id");
+		// user's rate of restaurant  [saved in local storage]
+		const rating = ratingsMap[id];
+		//  no rates by user yet.  
+		if (!rating) {
+			$(".fa-star", elem).removeClass("fill");
+		} else {
+			// lt: index less than rating-value
+			const toTurnOn = $(`.fa-star:lt(${rating})`, elem);
+			toTurnOn.addClass("fill");
+			// gt: index greater than rating-value
+			const toTurnOff = $(`.fa-star:gt(${rating - 1})`, elem)
+			toTurnOff.removeClass("fill");
+		}
+	}
+
+	// code when clicking
+	$(document).on("click", ".fa-star", function (event) {
+		const rating = $(this).index() + 1;
+		// saves the rating data for the current card from among the others
+		const id = $(this).closest(".entry").data("id");
+		ratingsMap[id] = rating;
+		// saving the data in local storage
+		localStorage.setItem("rating", JSON.stringify(ratingsMap));
+
+	})
+
+	$(document).on("mouseenter", ".fa-star", function (event) {
+		$(this).siblings().removeClass("fill");
+		$(this).prevAll().addClass("fill");
+		$(this).addClass("fill");
+	});
+
+	$(document).on("mouseleave", ".rating", function (event) {
+		setStars($(this));
+	});
+
 	const activities = [
 		{
 			"id": 41,
@@ -127,7 +173,7 @@ $(function () {
 			"name": "Park Nesher",
 			"type": "Dog Friendly Garden",
 			"web": "https://www.kkl.org.il/recreation-and-tours/scenic-lookouts/scenic-lookouts-north/nesher-park/",
-			"img": "https://www.hamlatza.co.il/hamlatzaFiles/2538_1_size1.jpg",
+			"img": "/image/450.jpg",
 			"phone": "1-800-250-250",
 			"description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz",
 			"area": "Nesher",
@@ -135,12 +181,15 @@ $(function () {
 			"latitude": 35.031116
 		}
 	];
+
 	const actTemplate = $("#act-template");
 	const actList = $("#act-list")
 	// console.log(activities)
 	for (let act of activities) {
 		// clone the element
 		const clone = $(actTemplate.html());
+		clone.addClass(".entry");
+		clone.data("id", act.id);
 		// start filling the template fields
 		const img = $(".act-img", clone);
 		img.attr("src", act.img || "http://placehold.it/100x100");
@@ -157,6 +206,9 @@ $(function () {
 		phone.text(act.phone || "missing phone");
 		const type = $(".act-type", clone);
 		type.text(act.type || "missing activity type");
+		if (ratingsMap[act.id] !== undefined) {
+			setStars($(".rating", clone));
+		}
 		actList.append(clone);
 	}
 

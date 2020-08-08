@@ -28,6 +28,9 @@ body {
 
 .rating {
 	font-size: 28px;
-	color: rgb(240, 236, 28);
+	color: rgb(17, 17, 17);
 	cursor: pointer;
+}
+.rating .fill {
+	color:rgba(248, 212, 9, 0.877);
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- google font -->
@@ -46,58 +47,22 @@
     <div class="container-fluid" id="my_container">
         <div id="top_title" class="row shadow-sm p-1">
             <div class="d-none d-md-block mx-auto">
-                <p class="h2"> Dog Sight
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                    </svg></p>
+                <p class="h2"> Dog Sight <i class="fa fa-user" aria-hidden="true"></i>
+
+                </p>
                 <p class="h4">(Web)</p>
             </div>
             <div class="mx-auto d-md-none">
                 <p class="h4 mt-1">Dog sight
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                    </svg></p>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </p>
                 <p class="h4">(mobile)</p>
             </div>
         </div>
         <!-- /headers -->
-
         <div class="row w-100 mx-auto" id="third_box">
-            <form class="needs-validation mx-md-auto w-75" method="post" action="/login" novalidate>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="inputEmail4">Password</label>
-                        <input name="email" type="email" class="form-control" id="inputEmail4"
-                            placeholder="name@example.com" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a valid email address
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="inputPassword6">Confirm Password</label>
-                        <input name="password" type="password" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Must be 8-20 characters long.
-                        </div>
-                    </div>
-                </div>
+            <form class="needs-validation mx-md-auto w-75" method="POST" action="/register" novalidate>
+
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom01">First name</label>
@@ -131,7 +96,7 @@
                             Please fill out this field
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom04">Gender</label>
                         <select class="custom-select" id="validationCustom04" required>
                             <option selected disabled value="">Choose...</option>
@@ -184,7 +149,7 @@
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Dog age</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <input type="number" class="form-control" id="validationCustom03" required>
                         <div class="invalid-feedback">
                             Please fill out this field.
                         </div>
@@ -198,8 +163,8 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-3 mb-3">
-                        <label for="validationCustom04">Gender</label>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom04"> Dog Gender</label>
                         <select class="custom-select" id="validationCustom04" required>
                             <option selected disabled value="">Choose...</option>
                             <option>Male</option>
@@ -210,8 +175,9 @@
                         </div>
                     </div>
                 </div>
-
-                <button id="kak" class="btn btn-primary" type="submit">Update Profile </button>
+                <div class="text-center mt-2">
+                    <button id="kak" class="btn btn-primary" type="submit">Update Profile </button>
+                </div>
             </form>
         </div>
     </div>

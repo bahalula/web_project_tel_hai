@@ -1,5 +1,51 @@
 $(function () {
-	// TODO user stars rate
+
+	let ratingsMap;
+	try {
+		ratingsMap = JSON.parse(localStorage.getItem("rating"));
+	} catch (err) {
+		ratingsMap = {};
+	}
+
+	function setStars(elem) {
+		// for knowing which card the event (click) came from. 
+		const id = $(elem).closest(".entry").data("id");
+		// user's rate of restaurant  [saved in local storage]
+		const rating = ratingsMap[id];
+		//  no rates by user yet.  
+		if (!rating) {
+			$(".fa-star", elem).removeClass("fill");
+		} else {
+			// lt: index less than rating-value
+			const toTurnOn = $(`.fa-star:lt(${rating})`, elem);
+			toTurnOn.addClass("fill");
+			// gt: index greater than rating-value
+			const toTurnOff = $(`.fa-star:gt(${rating - 1})`, elem)
+			toTurnOff.removeClass("fill");
+		}
+	}
+
+	// code when clicking
+	$(document).on("click", ".fa-star", function (event) {
+		const rating = $(this).index() + 1;
+		// saves the rating data for the current card from among the others
+		const id = $(this).closest(".entry").data("id");
+		ratingsMap[id] = rating;
+		// saving the data in local storage
+		localStorage.setItem("rating", JSON.stringify(ratingsMap));
+
+	})
+
+	$(document).on("mouseenter", ".fa-star", function (event) {
+		$(this).siblings().removeClass("fill");
+		$(this).prevAll().addClass("fill");
+		$(this).addClass("fill");
+	});
+
+	$(document).on("mouseleave", ".rating", function (event) {
+		setStars($(this));
+	});
+
 	const restaurants = [
 		{
 			"id": 21,
@@ -138,6 +184,8 @@ $(function () {
 	for (let rest of restaurants) {
 		// clone the element
 		const clone = $(restTemplate.html());
+		clone.addClass(".entry");
+		clone.data("id", rest.id);
 		// start filling the template fields
 		const img = $(".rest-img", clone);
 		img.attr("src", rest.img || "http://placehold.it/100x100");
@@ -153,6 +201,9 @@ $(function () {
 		const phone = $(".rest-phone", clone);
 		phone.attr("href", "tel:" + (rest.phone || "#"));
 		phone.text(rest.phone || "missing phone");
+		if (ratingsMap[rest.id] !== undefined) {
+			setStars($(".rating", clone));
+		}
 		restList.append(clone);
 	}
 

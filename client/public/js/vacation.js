@@ -1,57 +1,63 @@
 $(function () {
 
-	// function initRating(ratingElement) {
-	// 	const stars = $(".fa-star", ratingElement);
-	// 	stars.on("hover", (event) => {
-
-	// 	});
-	// }
 	let ratingsMap;
 	try {
+		// information of users rating via jason parser:  { element-id: raring-Value }  
 		ratingsMap = JSON.parse(localStorage.getItem("rating"));
 	} catch (err) {
 		ratingsMap = {};
 	}
 
 	function setStars(elem) {
+		// for knowing which card the event (click) came from.
 		const id = $(elem).closest(".entry").data("id");
+		// user's rate of restaurant  [saved in local storage]
 		const rating = ratingsMap[id];
+		//  no rates by user yet.   
 		if (!rating) {
 			$(".fa-star", elem).removeClass("fill");
 		} else {
+			//  lt: index less than rating-value
 			const toTurnOn = $(`.fa-star:lt(${rating})`, elem);
+			console.log(toTurnOn);
 			toTurnOn.addClass("fill");
+			//  gt: index greater than rating-value
 			const toTurnOff = $(`.fa-star:gt(${rating - 1})`, elem)
+			console.log(toTurnOff);
 			toTurnOff.removeClass("fill");
 		}
 	}
-
+	// code when clicking
 	$(document).on("click", ".fa-star", function (event) {
 		const rating = $(this).index() + 1;
+		// saves the rating data for the current card from among the others
 		const id = $(this).closest(".entry").data("id");
 		ratingsMap[id] = rating;
+		// saving the data in local storage
 		localStorage.setItem("rating", JSON.stringify(ratingsMap));
-		// code when clicking
 
 	})
+
 	$(document).on("mouseenter", ".fa-star", function (event) {
 		$(this).siblings().removeClass("fill");
 		$(this).prevAll().addClass("fill");
+		// fill the last star
 		$(this).addClass("fill");
 	});
 
 	$(document).on("mouseleave", ".rating", function (event) {
+		//  setting the "old rate" as already defined by rating value.  
 		setStars($(this));
 	});
 
-	const vacation = [
+	const vacations = [
 		{
 			"id": 31,
 			"name": "Neve Ayala - luxury suites",
 			"type": "guest room",
 			"area": "Hatzor HaGlilit",
 			"web": "https://www.resort.co.il/suite/neve-ayala-suites/",
-			"img": "https://www.zimmer.co.il/neve-ayala/ARN_4357_resize.jpg",
+			"img": "/image/31.jpg",
 			"phone": "052-368-8339",
 			"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
 			"longitude": 32.987505,
@@ -63,7 +69,7 @@ $(function () {
 			"type": "guest room",
 			"area": "Rosh Pinna",
 			"web": "https://my.weekend.co.il/%D7%97%D7%95%D7%95%D7%99%D7%94_%D7%91%D7%A0%D7%95%D7%A3/",
-			"img": "https://my.weekend.co.il/Templates/customerimages/18015/gallery/image_18015_21.jpg?w=500&quality=70",
+			"img": "/image/havaya.jpg",
 			"phone": "053-809-5052",
 			"description": "nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold",
 			"longitude": 32.995879,
@@ -75,7 +81,7 @@ $(function () {
 			"type": "hotel",
 			"area": "Eilat",
 			"web": "http://www.adihotel.co.il/",
-			"img": "http://www.adihotel.co.il/wp-content/themes/adihotelHeb/img/logo.png",
+			"img": "/image/33.png",
 			"description": "The Hotel is situated in the centre of Eilat within short walking distance to the beach – near the mall, the pubs and restaurants of a large tourist center.",
 			"phone": " 08-6388111",
 			"longitude": 29.551383,
@@ -88,7 +94,7 @@ $(function () {
 			"area": "Amirim",
 			"web": "https://www.zimmer.co.il/premium.asp?site_id=1274",
 			"phone": "052-321-2145",
-			"img": "https://www.amirims.co.il/amirim/12_1358929050(1).jpg",
+			"img": "/image/34.jpg",
 			"description": "semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante",
 			"longitude": 32.937932,
 			"latitude": 35.454242
@@ -99,7 +105,7 @@ $(function () {
 			"type": "guest room",
 			"area": "Ilaniya",
 			"web": "https://www.facebook.com/Ilaniya4seasonsresort/",
-			"img": "https://scontent.ftlv8-1.fna.fbcdn.net/v/t31.0-8/175748_132568046833483_2339223_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=GxdH81QJVRsAX9yVJIF&_nc_ht=scontent.ftlv8-1.fna&oh=0b2c9fc598d1537b612212c71b86eea6&oe=5F468DEF",
+			"img": "/image/35.jpg",
 			"phone": "054-739-9828",
 			"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
 			"longitude": 32.751392,
@@ -112,7 +118,7 @@ $(function () {
 			"area": "El rome",
 			"web": "https://www.zimmer-elrom.com/",
 			"phone": "052-2796275",
-			"img": "https://ezzimmer.com/wp-content/uploads/17-6-1024x640.jpg",
+			"img": "/image/36.jpg",
 			"description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast",
 			"longitude": 33.183069,
 			"latitude": 35.772769
@@ -135,7 +141,7 @@ $(function () {
 			"type": "guest room",
 			"area": "Amirim",
 			"phone": "050-2266162",
-			"img": "https://vegan-friendly.co.il/img/logos/%D7%90%D7%93%D7%95%D7%9D%D7%9C%D7%91%D7%9F%D7%9C%D7%95%D7%92%D7%95.png",
+			"img": "https://d3m9l0v76dty0.cloudfront.net/system/photos/697826/large/e0a7baa47c0e6f9c57aa4b77436a970d.jpg",
 			"description": "World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed",
 			"longitude": 32.935672,
 			"latitude": 35.448069
@@ -159,20 +165,21 @@ $(function () {
 			"type": "guest room",
 			"area": "Eilat",
 			"web": "https://my.weekend.co.il/%D7%95%D7%99%D7%9C%D7%94_%D7%A9%D7%A0%D7%94%D7%91/",
-			"img": "https://my.weekend.co.il/Templates/customerimages/24829/gallery/image_24829_17.jpg?w=1028&h=510&mode=crop&quality=70",
+			"img": "/image/40.jpg",
 			"description": " Wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. ",
 			"phone": "053-938-6943",
 			"longitude": 31.680342,
 			"latitude": 34.556754
 		}
 	];
+
 	const vacTemplate = $("#vac-template");
 	const vacList = $("#vac-list")
-	// console.log(vacation)
-	for (let vac of vacation) {
+	for (let vac of vacations) {
 		// clone the element
 		const clone = $(vacTemplate.html());
-		clone.addClass("entry")
+		// each vacation-card has entry-class
+		clone.addClass(".entry")
 		clone.data("id", vac.id);
 		// start filling the template fields
 		const img = $(".vac-img", clone);

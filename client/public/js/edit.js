@@ -1,22 +1,19 @@
-
-// validation for password
-var password = document.getElementById("password")
-var confirm_password = document.getElementById("confirm_password");
-password.addEventListener("input", (event) => {
-    confirm_password.pattern = password.value;
-})
-
-var forms = document.getElementsByClassName('needs-validation');
-Array.prototype.filter.call(forms, function (form) {
-    // loop over elements and prevent submission 
+$(function () {
+    var form = document.querySelector('form');
     form.addEventListener('submit', function (event) {
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+            //event.stopImmediatePropagation();
         }
         form.classList.add('was-validated');
+
     }, false);
-});
+
+
+
+})
+
 
 
 

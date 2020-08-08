@@ -27,5 +27,5 @@ body {
 	cursor: pointer;
 }
 .rating .fill {
-	color:yellow;
+	color:rgba(248, 212, 9, 0.877);
 }

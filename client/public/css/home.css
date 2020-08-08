@@ -1,29 +1,27 @@
 
 .marketing {
-    /* margin-bottom: 1.5rem;  */
     text-align: center;
     color: rgb(243, 253, 255);
 }
 
 .bg-image {
-    /* The image used */
     background-image: url("/image/dogbackground.jpg");
-    
     background-color: rgba(18, 80, 92, 0.253);
-    /* Add the blur effect */
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
-    
-    /* Full height */
     height: 100%; 
-    
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
     box-shadow: inset 0 0 0 1000px rgba(6, 25, 26, 0.2);
-
   }
 
- 
+#carouselExampleIndicators{
+    height: 50vh;
+}
+  .carousel-item img {
+      height:50vh;
+      object-fit: cover;
+      object-position: center;
+  }
+  
+    
+   

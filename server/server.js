@@ -2,16 +2,12 @@ const express = require('express');
 const app = express();
 const path = require("path");
 
-// ask tal: for what use the line below ... 
+
 const { profile } = require('console');
 const port = 3000
 const pages_dir = path.resolve(__dirname, "..", "client", "pages");
 const public_dir = path.resolve(__dirname, "..", "client", "public");
-// const dbservice = require("../data/dbservice");
-// dbservice.addRestaurant({
-//     name:"leonardo 2",
-//     long : 
-// })
+
 app.use(express.static(public_dir))
 app.use(express.urlencoded({ extended: false }));
 
@@ -23,7 +19,7 @@ app.get('/login', (req, res) => {
 	res.sendFile(path.join(pages_dir, 'login.html'))
 })
 app.post('/login', (req, res) => {
-	console.log(req.body);
+	// console.log(req.body);
 	res.redirect('/profile')
 })
 app.get('/register', (req, res) => {
@@ -31,7 +27,8 @@ app.get('/register', (req, res) => {
 })
 app.post('/register', (req, res) => {
 	console.log(req.body);
-	res.sendFile(path.join(pages_dir, 'register.html'))
+	res.redirect('/edit')
+	// res.sendFile(path.join(pages_dir, 'register.html'))
 })
 app.get('/profile', (req, res) => {
 	res.sendFile(path.join(pages_dir, 'profile.html'))
@@ -39,9 +36,6 @@ app.get('/profile', (req, res) => {
 app.get('/edit', (req, res) => {
 	res.sendFile(path.join(pages_dir, 'edit.html'))
 })
-// app.post('/edit', (req, res) => {
-//     console.log(req.body);
-//     res.sendFile(path.join(pages_dir, 'edit.html'))
 
 app.get('/restaurants', (req, res) => {
 	res.sendFile(path.join(pages_dir, 'restaurants.html'))
