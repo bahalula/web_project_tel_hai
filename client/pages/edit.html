@@ -47,22 +47,19 @@
     <div class="container-fluid" id="my_container">
         <div id="top_title" class="row shadow-sm p-1">
             <div class="d-none d-md-block mx-auto">
-                <p class="h2"> Dog Sight <i class="fa fa-user" aria-hidden="true"></i>
-
+                <p class="h2"><i class="fa fa-user" aria-hidden="true"></i> Dog Sight
                 </p>
                 <p class="h4">(Web)</p>
             </div>
             <div class="mx-auto d-md-none">
-                <p class="h4 mt-1">Dog sight
-                    <i class="fa fa-user" aria-hidden="true"></i>
+                <p class="h4 mt-1"> <i class="fa fa-user" aria-hidden="true"></i> Dog sight
                 </p>
                 <p class="h4">(mobile)</p>
             </div>
         </div>
         <!-- /headers -->
         <div class="row w-100 mx-auto" id="third_box">
-            <form class="needs-validation mx-md-auto w-75" method="POST" action="/register" novalidate>
-
+            <form class="needs-validation mx-md-auto w-75" method=" POST" action="/register" novalidate>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom01">First name</label>
@@ -87,44 +84,12 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustom02">Birthday</label>
-                        <input type="date" class="form-control" id="validationCustom02" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback ">
-                            Please fill out this field
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom04">Gender</label>
-                        <select class="custom-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please fill out this field.
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">Country</label>
+                        <label for="validationCustom03">Location</label>
                         <input type="text" class="form-control" id="validationCustom03" required>
                         <div class="invalid-feedback">
                             Please provide a valid city.
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">City</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom01">Dog name</label>
                         <input type="text" class="form-control" id="validationCustom01" required>
@@ -135,12 +100,25 @@
                             Please fill out this field
                         </div>
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom02">Dog type </label>
                         <input type="text" class="form-control" id="validationCustom02" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
+                        <div class="invalid-feedback">
+                            Please fill out this field
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom04"> Dog Gender</label>
+                        <select class="custom-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
                         <div class="invalid-feedback">
                             Please fill out this field
                         </div>
@@ -162,20 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom04"> Dog Gender</label>
-                        <select class="custom-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please fill out this field
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-2">
+                <div class="text-center py-2">
                     <button id="kak" class="btn btn-primary" type="submit">Update Profile </button>
                 </div>
             </form>
