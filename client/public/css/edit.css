@@ -1,28 +1,21 @@
 
-#top_title {
+.top-title {
     font-family: 'Dancing Script', cursive;
     background-color: rgba(56, 2, 65, 0.24);  
-    box-shadow: 0 4px 5px 0  rgba(73, 69, 69, 0.5);
-  
     text-align: center; 
 }
 
-#third_box {
-  
-    padding-top: 4px;
+.third-box {
+    flex: 1px;
 }
 
-
-#top_photo {
-/* for  web display */
-    width: 30%;
-}
-
-#my_container{
+.background-container{
     background-color: rgba(139, 139, 139, 0.13);  
     box-shadow: 0 4px 5px 0  rgba(73, 69, 69, 0.5);
+    flex: 1;
 }
-#kak{
+.btn-color{
     background-color: rgba(56, 2, 65, 0.24);
     border-color: rgba(139, 139, 139, 0.13);
+};
 }
